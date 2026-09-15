@@ -1,0 +1,131 @@
+# =============================================
+# .gitignore para Android Studio
+# Baseado em: github.com/github/gitignore/blob/main/Android.gitignore
+# =============================================
+
+
+# ──────────────────────────────────────────
+# Build outputs
+# ──────────────────────────────────────────
+*.apk
+*.aar
+*.ap_
+*.aab
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+release/
+
+# ──────────────────────────────────────────
+# Gradle
+# ──────────────────────────────────────────
+.gradle/
+local.properties
+gradle.properties.local
+
+# Manter o Gradle Wrapper (necessário para CI/CD e outros devs)
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# ──────────────────────────────────────────
+# Android Studio / IntelliJ IDEA
+# ──────────────────────────────────────────
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries/
+.idea/libraries/
+.idea/caches/
+.idea/modules.xml
+.idea/.name
+.idea/compiler.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/datasources.xml
+.idea/dataSources.ids
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/dbnavigator.xml
+.idea/copyright/
+.idea/scopes/
+.idea/modules/
+.idea/jsLibraryMappings.xml
+*.iml
+
+# Manter o .idea/modules se necessário para multi-módulo
+# (descomente se preferir versionar)
+# !.idea/modules.xml
+
+# ──────────────────────────────────────────
+# Native build (CMake / NDK)
+# ──────────────────────────────────────────
+.externalNativeBuild/
+.cxx/
+
+# ──────────────────────────────────────────
+# Logs e temporários
+# ──────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.swp
+captures/
+.navigation/
+
+# ──────────────────────────────────────────
+# Proguard / R8
+# ──────────────────────────────────────────
+proguard/
+*.pro.map
+
+# ──────────────────────────────────────────
+# Keystore / Assinatura
+# ──────────────────────────────────────────
+# IMPORTANTE: Nunca versione suas chaves de release!
+*.jks
+*.keystore
+key.properties
+
+# ──────────────────────────────────────────
+# Firebase / Google Services
+# ──────────────────────────────────────────
+# Contém chaves privadas — não versionar
+google-services.json
+
+# ──────────────────────────────────────────
+# Profiling e análise
+# ──────────────────────────────────────────
+*.hprof
+
+# ──────────────────────────────────────────
+# Fastlane (CI/CD)
+# ──────────────────────────────────────────
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# ──────────────────────────────────────────
+# Sistema Operacional
+# ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ──────────────────────────────────────────
+# SVN (se migrou de outro VCS)
+# ──────────────────────────────────────────
+.svn/
+
+# ──────────────────────────────────────────
+# Lint
+# ──────────────────────────────────────────
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
