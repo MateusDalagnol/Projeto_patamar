@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Degradê escuro (embaixo) -> transparente (em cima), pra dar contraste ao texto sobre a foto.
+     Vetor em vez de <shape>: shapes com gradiente não renderizam neste ambiente. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <path android:pathData="M0,0h100v100h-100z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endColor="#00000000"
+                android:endX="0"
+                android:endY="0"
+                android:startColor="#E6000000"
+                android:startX="0"
+                android:startY="100"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+</vector>

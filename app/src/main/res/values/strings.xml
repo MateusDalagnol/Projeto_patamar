@@ -1,3 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Projeto_patamar_sem_sobrecarga</string>
+    <string name="app_name">Patamar</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_continue">Continuar</string>
+    <string name="onboarding_start">Começar</string>
+
+    <!-- Auth -->
+    <string name="login_title">Entrar na sua conta</string>
+    <string name="login_eyebrow">QUASE LÁ</string>
+    <string name="login_email_hint">E-mail</string>
+    <string name="login_password_hint">Senha</string>
+    <string name="login_button">Entrar</string>
+    <string name="login_forgot_password">Esqueci a senha</string>
+    <string name="login_create_account">Criar conta</string>
+    <string name="login_continue_guest">Continuar sem login</string>
+    <string name="login_terms_notice">Termos de Uso · Política de Privacidade</string>
+
+    <string name="register_title">Criar sua conta</string>
+    <string name="register_name_hint">Nome completo</string>
+    <string name="register_email_hint">E-mail</string>
+    <string name="register_password_hint">Senha</string>
+    <string name="register_confirm_password_hint">Confirmar senha</string>
+    <string name="register_terms_checkbox">Aceito os Termos de Uso e a Política de Privacidade</string>
+    <string name="register_button">Criar conta</string>
+    <string name="register_password_rules">8 a 64 caracteres, com maiúscula, minúscula e número, sem espaços.</string>
+    <string name="register_go_to_login">Já tenho conta</string>
+
+    <!-- Filter -->
+    <string name="filter_eyebrow">Seu Patamar</string>
+    <string name="filter_hint_all">Sem seleção, mostramos todas as categorias.</string>
+    <string name="filter_hint_some">%1$d selecionada(s)</string>
+    <string name="filter_title">Personalize</string>
+    <string name="filter_subtitle">Escolha o que quer ver perto de você</string>
+    <string name="filter_categories_label">Categorias</string>
+    <string name="filter_distance_label">Distância</string>
+    <string name="filter_featured_label">Em destaque</string>
+    <string name="filter_confirm">Ver eventos</string>
+    <string name="filter_skip">Pular por agora</string>
+
+    <!-- Main / Bottom nav -->
+    <string name="nav_map">Mapa</string>
+    <string name="nav_explore">Descobrir</string>
+    <string name="nav_saved">Salvos</string>
+    <string name="nav_profile">Perfil</string>
+
+    <!-- Explore -->
+    <string name="explore_search_hint">Buscar eventos…</string>
+    <string name="explore_section_trending">Em alta agora</string>
+    <string name="explore_section_nearby">Perto de você</string>
+    <string name="explore_section_weekend">Este fim de semana</string>
+    <string name="explore_section_free">Entrada gratuita</string>
+
+    <!-- Saved -->
+    <string name="saved_title">Salvos</string>
+    <string name="saved_empty_title">Você ainda não salvou nada</string>
+    <string name="saved_empty_cta">Explorar eventos</string>
+    <string name="saved_guest_title">Crie uma conta para salvar eventos e receber alertas</string>
+
+    <!-- Profile -->
+    <string name="profile_section_account">MINHA CONTA</string>
+    <string name="profile_section_app">APP</string>
+    <string name="profile_change_password">Alterar senha</string>
+    <string name="profile_notifications">Notificações</string>
+    <string name="profile_about">Sobre o Patamar</string>
+    <string name="profile_terms">Termos de Uso</string>
+    <string name="profile_privacy">Política de Privacidade</string>
+    <string name="profile_logout">Sair</string>
+    <string name="profile_guest_notice">Você está no modo visitante</string>
+    <string name="profile_create_account">Criar conta</string>
+    <string name="profile_login">Entrar</string>
+
+    <!-- Event detail -->
+    <string name="event_detail_when">Quando</string>
+    <string name="event_detail_where">Onde</string>
+    <string name="event_detail_entry">Entrada</string>
+    <string name="event_detail_about">Sobre o evento</string>
+    <string name="event_detail_close">Fechar</string>
+    <string name="event_detail_save">Salvar</string>
+    <string name="event_detail_saved">Salvo</string>
+    <string name="event_save">Salvar evento</string>
+    <string name="event_unsave">Remover dos salvos</string>
+    <string name="event_save_needs_account">Crie uma conta para salvar eventos</string>
+    <string name="event_detail_view_on_map">Ver no mapa</string>
+
+    <!-- Map -->
+    <string name="map_filters">Filtros</string>
+    <string name="map_filters_active">Filtros · %1$d</string>
+    <string name="map_filters_title">Filtrar por categoria</string>
+    <string name="map_filters_subtitle">Escolha o que você quer ver no mapa</string>
+    <string name="map_filters_clear">Limpar</string>
+    <string name="map_filters_apply">Aplicar</string>
 </resources>

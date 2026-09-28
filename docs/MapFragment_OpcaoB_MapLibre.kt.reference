@@ -1,0 +1,81 @@
+// REFERÊNCIA — Opção B de mapa (MapLibre + OpenFreeMap), NÃO compilada.
+// Para ativar:
+// 1. Em app/build.gradle.kts: comente a linha do osmdroid e descomente a do MapLibre.
+// 2. Em settings.gradle.kts: adicione maven("https://maven.maplibre.org/releases")
+//    dentro de dependencyResolutionManagement.repositories.
+// 3. Substitua o conteúdo de ui/map/MapFragment.kt pelo código abaixo (ajustando
+//    o layout fragment_map.xml para trocar <org.osmdroid.views.MapView> por
+//    <org.maplibre.android.maps.MapView>).
+
+package com.patamar.app.ui.map
+
+import android.graphics.Color
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.patamar.app.data.local.mock.MockDataSource
+import com.patamar.app.data.model.Event
+import org.maplibre.android.camera.CameraPosition
+import org.maplibre.android.geometry.LatLng
+import org.maplibre.android.maps.MapView
+import org.maplibre.android.maps.MapLibreMap
+import org.maplibre.android.maps.Style
+import org.maplibre.android.style.layers.CircleLayer
+import org.maplibre.android.style.layers.PropertyFactory.*
+import org.maplibre.android.style.sources.GeoJsonSource
+
+private const val STYLE_URL = "https://tiles.openfreemap.org/styles/liberty"
+
+class MapFragmentMapLibre : Fragment() {
+
+    private lateinit var mapView: MapView
+    private var mapLibreMap: MapLibreMap? = null
+    private val viewModel: MapViewModel by viewModels()
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
+        val root = inflater.inflate(com.patamar.app.R.layout.fragment_map, container, false)
+        mapView = root.findViewById(com.patamar.app.R.id.mapView)
+        mapView.onCreate(savedInstanceState)
+        return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        mapView.getMapAsync { map ->
+            mapLibreMap = map
+            map.setStyle(Style.Builder().fromUri(STYLE_URL)) { style ->
+                setupEventLayer(style)
+            }
+            map.uiSettings.apply {
+                isAttributionEnabled = true // OBRIGATÓRIO
+                isLogoEnabled = false
+            }
+            map.cameraPosition = CameraPosition.Builder()
+                .target(LatLng(-25.4284, -49.2733))
+                .zoom(13.0)
+                .build()
+        }
+    }
+
+    private fun setupEventLayer(style: Style) {
+        // Monte um FeatureCollection GeoJSON a partir de MockDataSource.events
+        // e registre GeoJsonSource + CircleLayer, com clique via queryRenderedFeatures.
+        // (Ver spec original do beta para o código completo.)
+    }
+
+    override fun onStart() { super.onStart(); mapView.onStart() }
+    override fun onResume() { super.onResume(); mapView.onResume() }
+    override fun onPause() { super.onPause(); mapView.onPause() }
+    override fun onStop() { super.onStop(); mapView.onStop() }
+    override fun onLowMemory() { super.onLowMemory(); mapView.onLowMemory() }
+    override fun onDestroyView() { super.onDestroyView(); mapView.onDestroy() }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        mapView.onSaveInstanceState(outState)
+    }
+}
